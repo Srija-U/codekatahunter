@@ -7,7 +7,7 @@ c=[]
 t=[]
 te=0
 for i in range(0,l):
-    if(a[i-1]==a[i]):
+    if(a[i] in b):
         next
     else:
         b[a[i]]=0
@@ -20,12 +20,6 @@ for i in range(0,le):
 d=list(b.values())
 #c-->key_list
 #d-->val_list
-for i in range(0,le):
-    if(d[i]==1):
-        te+=1
-if(te==le):
-    print("unique")
-    exit()
 for i in range(0,le):
     if(d[i]>1):
         t.append(c[d.index(d[i])])
