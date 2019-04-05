@@ -1,28 +1,28 @@
-n=int(input())
+no=int(input())
 ab=[int(i) for i in input().split()]
 l=len(ab)
 ab.sort()
-b={}
-c=[]
-t=[]
+ba={}
+ca=[]
+ta=[]
 te=0
 for i in range(0,l):
-    if(ab[i] in b):
+    if(ab[i] in ba):
         next
     else:
-        b[ab[i]]=0
-        c.append(ab[i])
-le=len(c)
+        ba[ab[i]]=0
+        ca.append(ab[i])
+le=len(ca)
 for i in range(0,le):
     for j in range(0,l):
-        if(c[i]==ab[j]):
-            b[c[i]]+=1
-d=list(b.values())
-#c-->key_list
-#d-->val_list
+        if(ca[i]==ab[j]):
+            ba[ca[i]]+=1
+da=list(ba.values())
+#ca-->key_list
+#da-->val_list
 for i in range(0,le):
-    if(d[i]>1):
-        t.append(c[d.index(d[i])])
-        b.pop(c[d.index(d[i])],None)
-        c=list(b.keys())
-print(*t,sep=' ')
+    if(da[i]>1):
+        ta.append(ca[da.index(da[i])])
+        ba.pop(ca[da.index(da[i])],None)
+        ca=list(ba.keys())
+print(*ta,sep=' ')
