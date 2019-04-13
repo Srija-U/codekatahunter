@@ -12,5 +12,5 @@ for i in range(n-2,0,-1):
     if(t==c):
         s.append(l[i])
 ss.append(max(l))
-print(*s,sep=' ')
+print(*s,sep=' ',end='\n')
 print(*ss,sep=' ')
